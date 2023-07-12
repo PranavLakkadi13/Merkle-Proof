@@ -42,7 +42,7 @@ contract Proof {
 }
 
 contract TestMerkleProof is Proof {
-    bytes32[] public hashes;
+    bytes32[] private hashes;
 
     constructor() {
         string[4] memory transactions = [
@@ -78,6 +78,11 @@ contract TestMerkleProof is Proof {
     function getRoot() public view returns (bytes32) {
         return hashes[hashes.length - 1];
     }
+
+    function getHashes(uint256 index) public view returns (bytes32) {
+         return hashes[index];
+     }
+
 
     /* verify
     3rd leaf
