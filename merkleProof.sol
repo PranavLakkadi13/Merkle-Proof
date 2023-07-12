@@ -79,7 +79,7 @@ contract TestMerkleProof is Proof {
         return hashes[hashes.length - 1];
     }
 
-    function getHashes(uint256 index) public view returns (bytes32) {
+    function getHash(uint256 index) public view returns (bytes32) {
          return hashes[index];
      }
 
